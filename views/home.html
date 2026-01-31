@@ -1,57 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style/styles.css"/>
-    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/style/styles.css" >
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico" >
     <script src="/js/contact-me.js" defer></script>
     <title>Connect with me!</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>Connect with me!</h1>
-        <form id="contact-me-form" action="#" method="get">
-            <fieldset>
-                <!-- informational form  -->
-                <legend class="info"> Your Information </legend>
-                <div class="info-grid">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="First Name" required>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
-                <label for="job-title">Job Title/Position</label>
-                <input type="text" id="job-title" name="job-title" placeholder="Job Title/Position">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="company" placeholder="Company/Organization">
-                <label for="linkedin">LinkedIn URL </label>
-                <input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn Profile URL">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <label for="meet">How did we meet?</label>
-                <input type="text" id="meet" name="meet" placeholder="How did we meet?" required>
-                </div>
-           
-            </fieldset>
-                <!-- Messagging section -->
-                <div class="message-wrapper">
-                <legend for="message">Message me!</legend>
-                <textarea id="message" name="message" placeholder="What would you like to say to me?"></textarea>
-                </div>
-                <!-- Mailing list checkbox -->
-                <label for="mailing-list"><input type="checkbox" id="mailing-list" name="mailing-list">Check to be added to my mailing list</label>
-                <br>
-                <br>
-                
-                <legend class="email-format" for="email-format">Choose an email format: 
-                <label for=email-format>HTML<input type="radio" id="html" name="email-format" value="HTML"></label>   
-                <label for=email-format>Text<input type="radio" id="text" name="email-format" value="Text"></label></legend>
-                
-                <br>
-                
-                <!-- Submit button -->
-                <button type="submit" id="submit-button">Submit</button>
-         </form>
+      <h1>Connect with me!</h1>
+      <form id="contact-me-form" action="#" method="get">
+        <fieldset>
+          <!-- informational form  -->
+          <legend class="info">Your Information</legend>
+          <div class="info-grid">
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="First Name"
+              required
+            />
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Last Name"
+              required
+            />
+            <label for="job-title">Job Title/Position</label>
+            <input
+              type="text"
+              id="job-title"
+              name="job-title"
+              placeholder="Job Title/Position"
+            />
+            <label for="company">Company</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Company/Organization"
+            />
+            <label for="linkedin">LinkedIn URL </label>
+            <input
+              type="url"
+              id="linkedin"
+              name="linkedin"
+              placeholder="LinkedIn Profile URL"
+            />
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <label for="meet">How did we meet?</label>
+            <input
+              type="text"
+              id="meet"
+              name="meet"
+              placeholder="How did we meet?"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <!-- Messagging section -->
+          <legend>Message me!</legend>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="What would you like to say to me?"
+          ></textarea>
+        </fieldset>
+
+        <!-- Mailing list checkbox -->
+        <br />
+        <label for="mailing-list"
+          ><input type="checkbox" id="mailing-list" name="mailing-list" />Check
+          to be added to my mailing list</label
+        >
+        <br />
+        <br />
+        <fieldset class="email-format">
+          <legend>Choose an email format</legend>
+
+          <label for="html">
+            <input
+              type="radio"
+              id="html"
+              name="email-format"
+              value="HTML"
+              required
+            />
+            HTML
+          </label>
+
+          <label for="text">
+            <input type="radio" id="text" name="email-format" value="Text" />
+            Text
+          </label>
+        </fieldset>
+        <br>
+        <br>
+        <!-- Submit button -->
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
     </main>
-</body>
+  </body>
 </html>
