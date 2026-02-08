@@ -15,6 +15,7 @@ main{
     border-radius:10px;
     padding: 1rem 1rem 2rem 1rem;
     margin-bottom: 2rem;
+    max-width: 2000px;
 }
 h1{
     text-align:center;
@@ -25,9 +26,9 @@ legend, label{
 
 .info-grid{
     display:grid;
-    grid-template-columns: auto 1fr auto 1fr auto 1fr;
-    gap: 1rem 2rem;
+    grid-template-columns: 120px 1fr 120px 1fr 120px 1fr;
     align-items:center;
+    gap: .5rem .8rem;
 }
 .info-grid input{
     width:fill;
@@ -47,13 +48,7 @@ textarea{
 .email-format{
     display:inline-block;
 }
-
-/* error validation colors */
-input:invalid,
-textarea:invalid {
-  border: 2px solid red;
-}
-
-input:valid, textarea:valid{
-  border: 2px solid green;
+.input-error{
+    color: red;
+    font-style: italic;
 }
