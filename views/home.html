@@ -14,9 +14,10 @@
       <form id="contact-me-form" action="#" method="get">
         <fieldset>
           <!-- informational form  -->
-          <div>
+          
           <legend class="info">Your Information</legend>
           <div class="info-grid">
+            <div class="field">
             <label for="fname">First Name</label>
             <input
               type="text"
@@ -28,7 +29,7 @@
             <span class="error" id="fname-error"></span>
             </div>
 
-            <div>
+            <div class="field">
             <label for="lname">Last Name</label>
             <input
               type="text"
@@ -40,7 +41,7 @@
             <span class="error" id="lname-error"></span>
             </div>
 
-            
+            <div class="field">
             <label for="job-title">Job Title/Position</label>
             <input
               type="text"
@@ -48,7 +49,9 @@
               name="job-title"
               placeholder="Job Title/Position"
             />
+            </div>
 
+            <div class="field">
             <label for="company">Company</label>
             <input
               type="text"
@@ -56,8 +59,9 @@
               name="company"
               placeholder="Company/Organization"
             />
+            </div>
             
-            <div>
+            <div class="field">
             <label for="linkedin">LinkedIn URL </label>
             <input
               type="url"
@@ -69,6 +73,7 @@
              <span class="error" id="linkedin-error"></span>
             </div>
 
+            <div class="field">
             <label for="email">Email Address</label>
             <input
               type="text"
@@ -80,7 +85,7 @@
              <span class="error" id="email-error"></span>
             </div>
 
-            <div>
+            <div class="field">
             <label for="meet">How did we meet?</label>
             <input
               type="text"
@@ -90,9 +95,7 @@
             />
             <!-- validation for JS -->
              <span class="error" id="meet-error"></span>
-            </div>
-
-            
+            </div> 
           </div>
         </fieldset>
         <fieldset>
