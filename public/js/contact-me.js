@@ -51,26 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
     }
 
-    // Email optional, but format if present
-    const emailVal = email.value.trim();
-    const wantsMailingList = mailingList.checked;
-
-    if (wantsMailingList && !emailVal) {
-      errors.email.textContent = "Email is required when joining the mailing list.";
-      isValid = false;
-    } else if (emailVal && !validateEmailFormat(emailVal)) {
-      errors.email.textContent = "Please enter a valid email address.";
-      isValid = false;
-    }
-
-    // If mailing list checked, require email format radio
-    if (wantsMailingList) {
-      const anyChecked = Array.from(emailFormatRadios).some(r => r.checked);
-      if (!anyChecked) {
-        errors.emailFormat.textContent = "Please choose an email format.";
-        isValid = false;
-      }
-    }
+    // email is required 
+  if (!emailVal) {
+    if (errors.email) errors.email.textContent = "Email is required.";
+    isValid = false;
+  } 
+  else if (!validateEmailFormat(emailVal)) {
+    if (errors.email) errors.email.textContent = "Please enter a valid email address.";
+    isValid = false;
+  }
 
     // LinkedIn optional, but must start with specific URL if provided
     const linkedinVal = linkedin.value.trim();
@@ -91,26 +80,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Optional challenge: show/hide email format fieldset based on mailing list checkbox
-  mailingList.addEventListener("change", () => {
-    if (mailingList.checked) {
-      emailFormatFieldset.style.display = "block";
-    } else {
-      emailFormatFieldset.style.display = "none";
-      // Clear radio selection and related error
-      emailFormatRadios.forEach(r => r.checked = false);
-      errors.emailFormat.textContent = "";
-    }
-  });
-
-  // Optional challenge: show/hide "Other" textbox based on dropdown
-  meet.addEventListener("change", () => {
-    if (meet.value === "other") {
-      meetOther.style.display = "block";
-    } else {
-      meetOther.style.display = "none";
-      meetOther.value = "";
-      errors.meetOther.textContent = "";
-    }
-  });
 });

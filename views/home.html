@@ -14,6 +14,7 @@
       <form id="contact-me-form" action="#" method="get">
         <fieldset>
           <!-- informational form  -->
+          <div>
           <legend class="info">Your Information</legend>
           <div class="info-grid">
             <label for="fname">First Name</label>
@@ -25,7 +26,9 @@
             />
             <!-- validation for JS -->
             <span class="error" id="fname-error"></span>
+            </div>
 
+            <div>
             <label for="lname">Last Name</label>
             <input
               type="text"
@@ -35,7 +38,9 @@
             />
             <!-- validation for JS -->
             <span class="error" id="lname-error"></span>
+            </div>
 
+            
             <label for="job-title">Job Title/Position</label>
             <input
               type="text"
@@ -51,7 +56,8 @@
               name="company"
               placeholder="Company/Organization"
             />
-
+            
+            <div>
             <label for="linkedin">LinkedIn URL </label>
             <input
               type="url"
@@ -60,7 +66,8 @@
               placeholder="LinkedIn Profile URL"
             />
             <!-- validation for JS -->
-
+             <span class="error" id="linkedin-error"></span>
+            </div>
 
             <label for="email">Email Address</label>
             <input
@@ -70,8 +77,10 @@
               placeholder="Email"
             />
             <!-- validation for JS -->
+             <span class="error" id="email-error"></span>
+            </div>
 
-
+            <div>
             <label for="meet">How did we meet?</label>
             <input
               type="text"
@@ -80,6 +89,8 @@
               placeholder="How did we meet?"
             />
             <!-- validation for JS -->
+             <span class="error" id="meet-error"></span>
+            </div>
 
             
           </div>

@@ -26,8 +26,8 @@ legend, label{
 
 .info-grid{
     display:grid;
-    grid-template-columns: 120px 1fr 120px 1fr 120px 1fr;
-    align-items:center;
+    grid-template-columns: repeat(3, minmax(220px,1fr));
+    align-items:start;
     gap: .5rem .8rem;
 }
 .info-grid input{
