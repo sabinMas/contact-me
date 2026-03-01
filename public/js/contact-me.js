@@ -78,8 +78,5 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
     }
 
-    if (!isValid) {
-      e.preventDefault();
-    }
   });
 });

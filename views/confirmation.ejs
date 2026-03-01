@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You!</title>
+    <link rel= "stylesheet" href="/styles/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico" />
+  </head>
+  <body>
+
+    <%- include('partials/header') %>
+
+    <main>
+      <h1>Thank you, <%= contact.fname %>!</h1>
+      <p>Hopefully I got your message on <%= contact.timestamp.toLocaleString() %>.</p>
+      <p>I'll try to get back to you at <strong><%= contact.email %></strong> as soon as I can.</p>
+      <a href="/">Go Back Home</a>
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </body>
+</html>
