@@ -1,0 +1,139 @@
+
+:root{
+    --primary:#828497;
+    --accent-hover:rgb(194, 253, 255);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* tried getting Apple style font and webkit found on google*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.3;
+    background-color: var(--primary);
+    color: #333;
+    padding: 32px 16px;
+    line-height:1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: .9px;
+
+} 
+section{
+    margin-bottom: .25rem;
+}
+h2{
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+h3{
+    font-size:1rem;
+}
+
+ul{
+    margin-left: 35px;
+}
+main{
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 28px 34px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border: 2px solid #fff;
+    object-position: center 35%;
+}
+
+.page-header {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    color: #ffff;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.role {
+    font-size: 1.25rem;
+}
+.contact{
+    font-size: 1rem;
+}
+.contact a {
+    color: inherit;
+}
+.contact a:hover {
+    color: var(--accent-hover);
+}
+a{
+    color: inherit;
+}
+a:hover{
+    color: var(--primary);
+}
+
+/* Parent container holding the three columns */
+.skills {
+  display: flex;
+  gap: 2rem;            
+  margin-top: 0.5rem;
+}
+
+/* Each skill column */
+.t-skills {
+  flex: 1;                
+  padding: 0 1rem;
+}
+
+/* vertical divider between columns */
+.t-skills + .t-skills {
+  border-left: 1px solid #000;
+}
+
+
+.skills-list {
+  list-style-position: inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Slight spacing under headers */
+.t-skills h4 {
+  margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 600px) {
+ .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+  .skills {
+    flex-direction: column;
+  }
+  
+  .t-skills + .t-skills {
+    border-left: none;
+    border-top: 1px solid #000;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  ul{
+    margin-left: 5px;
+}
+}
+
