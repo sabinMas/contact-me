@@ -5,7 +5,7 @@ import express from 'express';
 const app =express();
 
 // define PORT number
-const PORT= 3000;
+const PORT= 3007;
 
 app.use(express.static('public'));
 
