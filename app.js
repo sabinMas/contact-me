@@ -9,12 +9,12 @@ app.use(express.urlencoded({ extended: true }));
 const contacts = [];  // in-memory database
 
 // Home = Resume
-app.get('/resume', (req, res) => {
+app.get('/', (req, res) => {
   res.render('resume');
 });
 
 // Contact form
-app.get('/', (req, res) => {
+app.get('/contact', (req, res) => {
   res.render('home');
 });
 
