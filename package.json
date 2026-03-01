@@ -5,7 +5,7 @@
   },
   "name": "contact-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic Node application for you to get in contact with me!",
   "main": "app.js",
   "devDependencies": {
     "nodemon": "^3.1.11"

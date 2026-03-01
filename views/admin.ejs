@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Contact Submissions</title>
+    <!-- styles -->
+    <link rel= "stylesheet" href="/style/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico" />
+    <!-- scripts -->
+    <script src="//code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="//cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+
+  </head>
+  <body>
+
+    <%- include('partials/header') %>
+
+    <main>
+      <h1>Contact Submissions</h1>
+
+      <% if (contacts.length === 0) { %>
+        <p class="no-contacts">No contacts to display yet.</p>
+      <% } else { %>
+        <table id="contacts-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Job Title</th>
+              <th>Company</th>
+              <th>LinkedIn</th>
+              <th>How We Met</th>
+              <th>Message</th>
+              <th>Mailing List</th>
+              <th>Email Format</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% contacts.forEach(contact => { %>
+              <tr>
+                <td><%= contact.fname %> <%= contact.lname %></td>
+                <td><%= contact.email %></td>
+                <td><%= contact.jobTitle %></td>
+                <td><%= contact.company  %></td>
+                <td>
+                  <% if (contact.linkedin) { %>
+                    <a href="<%= contact.linkedin%>" target="_blank">Profile</a>
+                  <% } else { %>
+                    —
+                  <% } %>
+                </td>
+                <td><%= contact.meet %></td>
+                <td><%= contact.message %></td>
+                <td><%= contact.mailingList %></td>
+                <td><%= contact.emailFormat %></td>
+                <td><%= contact.timestamp.toLocaleString() %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } %>
+        <script>
+        let table = new DataTable('#contacts-table');
+        </script>
+
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </body>
+</html>

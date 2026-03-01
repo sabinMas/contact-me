@@ -1,22 +1,48 @@
-//import express module
 import express from 'express';
-
-//creating an instance of express
-const app =express();
-
-// define PORT number
-const PORT= 3007;
+const app = express();
+const PORT = 3007;
 
 app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
 
-//define default route connected to sendfile instead of just send
-app.get('/', (req,res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+const contacts = [];  // in-memory database
 
+// Home = Resume
+app.get('/resume', (req, res) => {
+  res.render('resume');
 });
 
-app.listen(PORT,() => {
-    console.log(`Server is running at http://localhost:${PORT}`);
+// Contact form
+app.get('/', (req, res) => {
+  res.render('home');
 });
 
+// Confirmation route for contact form submission
+app.post('/submit-contact', (req, res) => {
+  const contact = {
+  fname:        req.body.fname,
+  lname:        req.body.lname,
+  email:        req.body.email,
+  jobTitle:     req.body['job-title'],
+  company:      req.body.company,
+  linkedin:     req.body.linkedin,
+  meet:         req.body.meet,
+  message:      req.body.message,
+  mailingList:  req.body['mailing-list'] === 'on',
+  emailFormat:  req.body['email-format'],
+  timestamp:    new Date()
+};
 
+  contacts.push(contact);
+  res.render('confirmation', { contact });
+});
+
+// Admin
+app.get('/admin', (req, res) => {
+  res.render('admin', { contacts });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
