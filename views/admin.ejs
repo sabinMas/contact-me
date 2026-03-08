@@ -27,13 +27,9 @@
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th>Job Title</th>
               <th>Company</th>
               <th>LinkedIn</th>
-              <th>How We Met</th>
               <th>Message</th>
-              <th>Mailing List</th>
-              <th>Email Format</th>
               <th>Timestamp</th>
             </tr>
           </thead>
@@ -42,7 +38,6 @@
               <tr>
                 <td><%= contact.fname %> <%= contact.lname %></td>
                 <td><%= contact.email %></td>
-                <td><%= contact.jobTitle %></td>
                 <td><%= contact.company  %></td>
                 <td>
                   <% if (contact.linkedin) { %>
@@ -51,10 +46,7 @@
                     —
                   <% } %>
                 </td>
-                <td><%= contact.meet %></td>
                 <td><%= contact.message %></td>
-                <td><%= contact.mailingList %></td>
-                <td><%= contact.emailFormat %></td>
                 <td><%= contact.timestamp.toLocaleString() %></td>
               </tr>
             <% }) %>
