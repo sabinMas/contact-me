@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="/imgs/favicon.ico">
+    <title>Portfolio | Mason Sabin</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <main>
+      <h1>Portfolio</h1>
+      <p>A collection of projects from SDEV 301, SDEV 305, and personal work.</p>
+
+      <!-- SDEV 301 Projects -->
+      <section class="portfolio-section">
+        <h2>SDEV 301 Projects</h2>
+        <hr>
+
+        <article class="portfolio-card">
+          <h3>MicroJam — GBA 25th Anniversary Game</h3>
+          <p class="tech-used"><strong>Technologies:</strong> JavaScript, HTML5 Canvas, CSS</p>
+          <p class="role"><strong>Role:</strong> Developer — built the "sno" mini-game directories within the project</p>
+          <p>A collaborative Gameboy Advance 25th anniversary celebration game. I was responsible for all the sno-themed game directories.</p>
+          <div class="iframe-container">
+            <iframe 
+              src="https://onjamm.github.io/microjam/" 
+              title="MicroJam GBA 25th Anniversary Game live demo"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="project-links">
+            <a href="https://github.com/onjamm/microjam" target="_blank">GitHub Repo</a> |
+            <a href="https://onjamm.github.io/microjam/" target="_blank">Live Demo</a>
+          </p>
+        </article>
+
+        <article class="portfolio-card">
+          <h3>Collectathon — GBA Snek-Style Game</h3>
+          <p class="tech-used"><strong>Technologies:</strong> JavaScript, HTML5 Canvas, CSS</p>
+          <p class="role"><strong>Role:</strong> Developer — designed and built the snek-style collectathon game</p>
+          <p>A retro Gameboy Advance inspired snake-style collection game built as a browser game.</p>
+          <div class="iframe-container">
+            <iframe 
+              src="https://onjamm.github.io/collectathon/" 
+              title="Collectathon GBA Snek-Style Game live demo"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="project-links">
+            <a href="https://github.com/onjamm/collectathon" target="_blank">GitHub Repo</a> |
+            <a href="https://onjamm.github.io/collectathon/" target="_blank">Live Demo</a>
+          </p>
+        </article>
+      </section>
+
+      <!-- SDEV 305 Projects -->
+      <section class="portfolio-section">
+        <h2>SDEV 305 Projects</h2>
+        <hr>
+
+        <article class="portfolio-card">
+          <h3>Ice Cream Order Form</h3>
+          <p class="tech-used"><strong>Technologies:</strong> Node.js, Express, EJS, CSS</p>
+          <p class="role"><strong>Role:</strong> Solo Developer — built as an EJS forms practice project</p>
+          <p>An ice cream ordering form built to practice server-side rendering with EJS templates and Express.</p>
+          <div class="iframe-container">
+            <iframe 
+              src="http://164.92.68.7:3010/" 
+              title="Ice Cream Order Form live demo"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="project-links">
+            <a href="https://github.com/onjamm/ice-cream" target="_blank">GitHub Repo</a> |
+            <a href="http://164.92.68.7:3010/" target="_blank">Live Demo</a>
+          </p>
+        </article>
+
+        <article class="portfolio-card">
+          <h3>CloudForge — Collectible Card Digitizer</h3>
+          <p class="tech-used"><strong>Technologies:</strong> Node.js, Express, EJS, MySQL, CSS</p>
+          <p class="role"><strong>Role:</strong> Solo Developer — designed and built the full-stack web application</p>
+          <p>A web application designed to digitize user's collectible cards, with full CRUD functionality and database storage.</p>
+          <div class="iframe-container">
+            <iframe 
+              src="http://64.23.157.215:3003/" 
+              title="CloudForge Collectible Card Digitizer live demo"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="project-links">
+            <a href="https://github.com/sabinMas/CloudForge" target="_blank">GitHub Repo</a> |
+            <a href="http://64.23.157.215:3003/" target="_blank">Live Demo</a>
+          </p>
+        </article>
+      </section>
+
+      <!-- Additional Projects -->
+      <section class="portfolio-section">
+        <h2>Additional Projects</h2>
+        <hr>
+
+        <article class="portfolio-card">
+          <h3>Buffet-Bot — AI-Powered Trading Assistant</h3>
+          <p class="tech-used"><strong>Technologies:</strong> Python, Ollama, Claude Code</p>
+          <p class="role"><strong>Role:</strong> Solo Developer</p>
+          <p>A CLI trading tool using two local LLMs in consensus mode to generate BUY/SELL/HOLD signals based on Buffett fundamentals with 100-point value scoring. Features 21+ CLI commands including backtesting and Monte Carlo projections.</p>
+          <p class="project-links">
+            <a href="https://github.com/sabinMas/buffet-bot" target="_blank">GitHub Repo</a>
+          </p>
+        </article>
+
+        <article class="portfolio-card">
+          <h3>Puget Salmon Health Dashboard</h3>
+          <p class="tech-used"><strong>Technologies:</strong> Next.js, TypeScript, Recharts, Leaflet</p>
+          <p class="role"><strong>Role:</strong> Solo Developer</p>
+          <p>A dashboard visualizing salmon health across 9 Puget Sound watersheds using WDFW, USGS, and WSDOT APIs. Visualizes 391+ return records with interactive maps and charts.</p>
+          <div class="iframe-container">
+            <iframe 
+              src="https://puget-salmon-health.vercel.app/" 
+              title="Puget Salmon Health Dashboard live demo"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="project-links">
+            <a href="https://puget-salmon-health.vercel.app/" target="_blank">Live Site</a>
+          </p>
+        </article>
+      </section>
+
+    </main>
+    <%- include('partials/footer') %>
+  </body>
+</html>
