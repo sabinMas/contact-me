@@ -15,7 +15,7 @@ main{
     padding:24px;
     margin: 0 auto 2rem;
     max-width: 1000px;
-    border: 2px solid rbga(0,0,0,0.12);
+    border: 2px solid rgba(0,0,0,0.12);
 }
 h1{
     text-align:center;
@@ -97,7 +97,7 @@ body {
     display:grid;
     grid-template-columns: repeat(3, minmax(220px,1fr));
     align-items:start;
-    gap: 12px, 18px;
+    gap: 12px 18px;
 }
 .field{
     display: grid;
@@ -105,18 +105,18 @@ body {
     gap: 6px;
     min-width: 0;
 }
-.info-grid input{
+.info-grid input,
+.info-grid select{
     width:100%;
     max-width: 100%;
     padding: .5rem .6rem;
     border: 1px solid rgba(0,0,0,0.25);
     border-radius: 6px;
-
 }
+
 .meet-box{
     align-items:center;
     width: 100%;
-
 }
 
 textarea{
@@ -125,7 +125,6 @@ textarea{
     padding: 0.6rem;
     border: 1px solid rgba(0,0,0,0.25);
     resize: vertical;
-
 }
 
 .email-format{
@@ -139,4 +138,99 @@ textarea{
     font-style: italic;
     font-size: .9rem;
     line-height: 1.15;
+}
+
+/* ── SERVER-SIDE ERRORS ── */
+.server-errors{
+    background-color: #fdd;
+    border: 1px solid #c00;
+    border-radius: 6px;
+    padding: 12px 18px;
+    margin-bottom: 1rem;
+}
+.server-errors ul{
+    margin: 0;
+    padding-left: 20px;
+}
+.server-errors li{
+    color: #c00;
+    font-size: .95rem;
+    margin-bottom: 4px;
+}
+
+/* ── PORTFOLIO ── */
+.portfolio-section{
+    margin-bottom: 2rem;
+}
+.portfolio-section h2{
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+.portfolio-card{
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 1.25rem;
+}
+.portfolio-card h3{
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+.tech-used, .role{
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+.project-links{
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+.project-links a{
+    color: #555;
+    text-decoration: underline;
+}
+.project-links a:hover{
+    color: #333;
+}
+
+/* ── IFRAME CONTAINER ── */
+.iframe-container{
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 0.75rem 0;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.iframe-container iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .info-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .info-grid{
+        grid-template-columns: 1fr;
+    }
+    .global-nav{
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+    .nav-links{
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    body{
+        padding-top: 90px;
+    }
 }
